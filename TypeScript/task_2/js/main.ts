@@ -53,6 +53,7 @@ console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 // Director
 
+// 6. Creating functions specific to employees
 function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
@@ -64,7 +65,27 @@ function executeWork(employee: Director | Teacher): string {
   return employee.workTeacherTasks();
 }
 
-executeWork(createEmployee(200));
+console.log(executeWork(createEmployee(200)));
 // Getting to work
-executeWork(createEmployee(1000));
+console.log(executeWork(createEmployee(1000)));
 // Getting to director tasks
+
+// 7. String literal types
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+  return '';
+  // Type 'undefined' is not assignable to type 'string'
+  // => Returning empty string
+}
+
+console.log(teachClass('Math'));
+// Teaching Math
+console.log(teachClass('History'));
+// Teaching History

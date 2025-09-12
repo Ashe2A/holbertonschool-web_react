@@ -36,4 +36,5 @@ studentsList.forEach((i) => {
   tbody.appendChild(row);
 });
 
+table.appendChild(tbody);
 document.body.appendChild(table);
