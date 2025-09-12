@@ -1,3 +1,4 @@
+// 1. Let's build a Teacher interface
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -25,6 +26,7 @@ console.log(teacher3);
 // lastName: 'Doe'
 // location: 'London'
 
+// 2. Extending the Teacher class
 interface Directors extends Teacher {
   numberOfReports: number;
 }
@@ -40,8 +42,16 @@ console.log(director1);
 
 // should print
 // Object
-// firstName: "John"
+// firstName: 'John'
 // fullTimeEmployee: true
-// lastName: "Doe"
-// location: "London"
+// lastName: 'Doe'
+// location: 'London'
 // numberOfReports: 17
+
+// 3. Printing teachers
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+const printTeacher: printTeacherFunction = (firstName, lastName) =>
+  `${firstName.charAt(0)}. ${lastName}`;
+console.log(printTeacher('John', 'Doe'));
