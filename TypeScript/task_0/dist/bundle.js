@@ -1,29 +1,29 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
+/******/ 	'use strict';
 /*!********************!*\
   !*** ./js/main.ts ***!
   \********************/
 
 var student1 = {
-    firstName: "Stéphane",
-    lastName: "Delarue",
+    firstName: 'Stéphane',
+    lastName: 'Delarue',
     age: 19,
-    location: "Lille",
+    location: 'Lille',
 };
 var student2 = {
-    firstName: "Alejandra",
-    lastName: "Rojo",
+    firstName: 'Alejandra',
+    lastName: 'Rojo',
     age: 20,
-    location: "Mexico City",
+    location: 'Mexico City',
 };
 var studentsList = [student1, student2];
-var table = document.createElement("table");
-var tbody = document.createElement("tbody");
+var table = document.createElement('table');
+var tbody = document.createElement('tbody');
 studentsList.forEach(function (i) {
-    var row = document.createElement("tr");
-    var firstNameCell = document.createElement("td");
+    var row = document.createElement('tr');
+    var firstNameCell = document.createElement('td');
     firstNameCell.textContent = i.firstName;
-    var locationCell = document.createElement("td");
+    var locationCell = document.createElement('td');
     locationCell.textContent = i.location;
     row.appendChild(firstNameCell);
     row.appendChild(locationCell);
